@@ -45,6 +45,9 @@ export default defineConfig({
         // viewport : {width: 720, height: 720},
         screenshot : 'on',
         trace : 'on',//off,on
+        launchOptions:{
+          slowMo:3000
+        }
       },
     },
 
