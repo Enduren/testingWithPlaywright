@@ -33,7 +33,7 @@ async function readExcel(worksheet,searchText) {
         {
             
             row.eachCell((cell,colNumber)=>{
-                //look for  value in the excel sheet
+                //look for the value in the excel sheet
                 if (cell.value === `${searchText}` ) {
                      
                     output.row= rowNumber;
@@ -46,7 +46,7 @@ async function readExcel(worksheet,searchText) {
         })
         return output;
 }
-// writeExcelTest("Sammy","tests/utils/download.xlsx","Testing")
+
 
 test('Upload download excel Validation', async ({ page }) => {
     const downloadPath = 'tests/utils/download.xlsx';
@@ -83,6 +83,5 @@ test('Upload download excel Validation', async ({ page }) => {
 
     await expect(orignalTextLocator).toBeHidden()
     
-    // Optional: Add an assertion to verify the UI updated
-    // await expect(page.getByText('File uploaded successfully')).toBeVisible();
+    
 });

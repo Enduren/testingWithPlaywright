@@ -1,4 +1,5 @@
  const {test, expect} = require('@playwright/test');
+ const loginData = require('../loginData.json');
 
 
 
@@ -6,12 +7,11 @@
  test('Client App login', async ({page})=>
  {
     //js file- Login js, DashboardPage
-     const email = "dtennison79@gmail.com";
-     const productName = 'Zara Coat 4';
+     
      const products = page.locator(".card-body");
      await page.goto("https://rahulshettyacademy.com/client");
-     await page.locator("#userEmail").fill(email);
-     await page.locator("#userPassword").type("Tester2026!");
+     await page.locator("#userEmail").fill(loginData.userEmail);
+     await page.locator("#userPassword").fill(loginData.userPassword);
      await page.locator("[value='Login']").click();
      await page.waitForLoadState('networkidle');
     const titles= await page.locator(".card-body b").allTextContents();
