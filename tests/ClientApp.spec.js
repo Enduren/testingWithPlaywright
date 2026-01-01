@@ -51,7 +51,7 @@
            break;
         }
     }
-   await expect(page.locator(".user__name [type='text']").first()).toHaveText(email);
+   await expect(page.locator(".user__name [type='text']").first()).toHaveText(loginData.userEmail);
    await page.locator(".action__submit").click();
    
    await expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
