@@ -1,5 +1,4 @@
  const {test, expect} = require('@playwright/test');
- const { LoginPage } = require('../tests/Page/LoginPage');
   const loginData = require('../loginData.json');
  const {POManager}=require('../tests/Page/POManager')
 
